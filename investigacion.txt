@@ -1,0 +1,45 @@
+SOLUCION A PREGUNTAS 
+
+
+B) 
+El polimorfismo hace referencia a la capacidad de los objetos de una misma jerarquía de clases para responderde manera diferente a un mismo mensaje o metodo, esto significa que un objeto puede tomar muchas formas y comportarse de manera distinta dependiendo del contexo en el que se utiliza.
+
+C)
+POLIMORFISMO DE SOBRECARGA: Este tipo de polimorfismo se basa en la sobrecarga de funciones o metodos, lo que significa que una misma funcion o metodo puede tener varios comportamientos segun los parametros que reciba 
+
+POLIMORFISMO DE SUBTIPO: Este tipo de polimorfismo se basa en la herencia y la relacion entre clases y subclases, permite que un objeto de una clase base pueda ser tratado como un objeto de cualquiera de sus subclases, lo que significa que un metodo  en una clase base puede ser redefinido en una subclase para proporcionar una implementacion especifica de ese metodo  para esa subclase.
+
+D)
+Ejemplo de sobrecarga 
+
+class Operaciones {
+    int suma(int a, int b) {
+        return a + b;
+    }
+
+    double suma(double a, double b) {
+        return a + b;
+    }
+}
+
+En este ejemplo se puede ver reflejada como el metodo suma se sobrecarga para manejar tanto enteros como números decimales
+
+E)
+La sobre escritura de metodos permite a una subclase proporcionar una implementacion especifica de un metodo  que ya ha sido definido en una de sus superclases.
+
+F)
+El polimorfismo permite la flexibilidad y la reutilizacion del codigo, tambien permite la abstraccion al permitir que los detalles de implementacion se oculten detras de interfaces comunes y por ultimo tambien facilita la implementacion de patrones de diseño.
+
+G)
+1. 
+Transporte público:
+El sistema de transporte público, tiene diferentes tipos de vehículos (autobuses, trenes, tranvías, etc.) pueden implementar la misma interfaz de transporte público. Por ejemplo, todos pueden tener métodos como "abordar" y "desembarcar". Los usuarios pueden utilizar estos métodos sin preocuparse por el tipo específico de vehículo, ya que todos ellos ofrecen las mismas funcionalidades a través de una interfaz común.
+
+2.
+Dispositivos electrónicos:
+Teléfonos inteligentes, tabletas y computadoras portátiles, pueden tener diferentes interfaces de usuario (pantallas táctiles, teclados físicos, mouse, etc.). A pesar de las diferencias en la forma en que interactúan con los usuarios, todos ellos pueden ofrecer funcionalidades comunes como "enviar un mensaje" o "navegar por Internet". Los usuarios pueden acceder a estas funcionalidades de manera consistente a través de interfaces diferentes, gracias al polimorfismo de las interfaces de usuario.
+
+3.
+Equipos deportivos:
+Diferentes equipos pueden implementar estrategias y tácticas distintas para ganar un partido. Por ejemplo, en el fútbol, equipos con diferentes formaciones (como 4-4-2, 4-3-3, etc.) pueden enfrentarse entre sí. Aunque la estrategia y la táctica pueden variar entre equipos, todos compiten en el mismo campo y tienen el mismo objetivo final: marcar goles y ganar el partido. Esto refleja el polimorfismo en la implementación de diferentes enfoques para lograr un objetivo común.
+
