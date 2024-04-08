@@ -1,0 +1,90 @@
+using System;
+
+class Figura
+{
+    public virtual double CalcularArea()
+    {
+        return 0;
+    }
+
+    public virtual double CalcularDiametro()
+    {
+        return 0;
+    }
+}
+
+class Circulo : Figura
+{
+    private double radio;
+
+    public Circulo(double radio)
+    {
+        this.radio = radio;
+    }
+
+    public override double CalcularArea()
+    {
+        return Math.PI * Math.Pow(radio, 2);
+    }
+
+    public override double CalcularDiametro()
+    {
+        return 2 * radio;
+    }
+}
+
+class Cuadrado : Figura
+{
+    private double lado;
+
+    public Cuadrado(double lado)
+    {
+        this.lado = lado;
+    }
+
+    public override double CalcularArea()
+    {
+        return Math.Pow(lado, 2);
+    }
+
+    public override double CalcularDiametro()
+    {
+        return 2 * lado;
+    }
+}
+
+class Rombo : Figura
+{
+    private double diagonal1;
+    private double diagonal2;
+
+    public Rombo(double diagonal1_, double diagonal2_)
+    {
+        this.diagonal1 = diagonal1_;
+        this.diagonal2 = diagonal2_;
+    }
+
+    public override double CalcularArea()
+    {
+        return (diagonal1 * diagonal2) / 2;
+    }
+
+    public override double CalcularDiametro()
+    {
+        return Math.Sqrt(Math.Pow(diagonal1, 2) + Math.Pow(diagonal2, 2));
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        var circulo = new Circulo(5);
+        var cuadrado = new Cuadrado(4);
+        var Rombo = new Rombo(6, 3);
+
+        Console.WriteLine($"Círculo - Área: {circulo.CalcularArea()}, Diámetro: {circulo.CalcularDiametro()}");
+        Console.WriteLine($"Cuadrado - Área: {cuadrado.CalcularArea()}, Diámetro: {cuadrado.CalcularDiametro()}");
+        Console.WriteLine($"Rombo - Área: {Rombo.CalcularArea()}, Diámetro: {Rombo.CalcularDiametro()}");
+    }
+}
